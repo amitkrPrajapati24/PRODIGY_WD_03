@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Web Developer Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9fafb;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  header {
+    background: linear-gradient(135deg, #4a90e2 0%, #50e3c2 100%);
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    font-weight: 600;
+    font-size: 2.8rem;
+    margin-bottom: 0.3rem;
+  }
+  header p.tagline {
+    font-weight: 300;
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  nav li {
+    margin: 0 1.2rem;
+  }
+  nav a {
+    display: inline-block;
+    padding: 1rem 0;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.25s ease, color 0.25s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #50e3c2;
+    border-color: #50e3c2;
+  }
+  .container {
+    max-width: 1000px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  .home-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  .home-text {
+    flex: 1 1 400px;
+  }
+  .home-text h2 {
+    font-weight: 600;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  .home-text p {
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  .profile-photo {
+    flex: 0 0 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #50e3c2;
+    box-shadow: 0 6px 15px rgba(80, 227, 194, 0.3);
+    max-width: 260px;
+    aspect-ratio: 1/1;
+  }
+  .profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  section.about-me {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+  }
+  section.about-me h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    border-left: 6px solid #4a90e2;
+    padding-left: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+  }
+  .about-content > div {
+    margin-bottom: 2rem;
+  }
+  .about-content h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #4a90e2;
+  }
+  .about-content p,
+  .about-content ul {
+    font-weight: 300;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+  }
+  .about-content ul {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+  }
+  footer {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 2rem 1rem;
+    color: #aaa;
+    border-top: 1px solid #eee;
+  }
+  /* Responsive */
+  @media (max-width: 720px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    nav ul {
+      flex-wrap: wrap;
+    }
+    .home-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .home-text {
+      order: 2;
+    }
+    .profile-photo {
+      order: 1;
+      margin: 0 auto 1.5rem;
+    }
+    section.about-me {
+      padding: 1.5rem 1.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home" aria-label="Go to home section">Home</a></li>
+      <li><a href="#about" aria-label="Go to about me section">About Me</a></li>
+    </ul>
+  </nav>
+
+  <header id="home" role="banner" aria-label="Homepage header">
+    <h1>Hello, I'm Aarav Singh</h1>
+    <p class="tagline">Creative Web Developer & Designer</p>
+  </header>
+
+  <main class="container" role="main">
+    <section class="home-section" aria-labelledby="skills-overview">
+      <div class="profile-photo" aria-hidden="true">
+        
+         <img src="https://smileyworldz.com/wp-content/uploads/2023/11/IMG-20250322-WA0002-1536x1536.jpg">
+      </div>
+      <div class="home-text">
+        <h2 id="skills-overview">My Skills</h2>
+        <p>
+          I specialize in building modern, performant, and accessible websites using HTML, CSS, JavaScript, and React. I have experience working with RESTful APIs, responsive design, and UI frameworks. Passionate about clean code, user experience, and bringing creative ideas to life.
+        </p>
+      </div>
+    </section>
+
+    <section id="about" class="about-me" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <div class="about-content">
+        <div class="background">
+          <h3>Background</h3>
+          <p>
+            I'm a web developer with over 5 years of experience building user-friendly, responsive websites and applications. I enjoy collaborating with designers and product teams to deliver impactful digital experiences.
+          </p>
+        </div>
+        <div class="education">
+          <h3>Education</h3>
+          <p>Bachelor of Science in Computer Science</p>
+          <p>University of Technology, 2015 - 2019</p>
+        </div>
+        <div class="experience">
+          <h3>Professional Experience</h3>
+          <ul>
+            <li><strong>Front-End Developer</strong> at Tech Solutions (2019 - Present)</li>
+            <li><strong>Intern Web Developer</strong> at Creative Agency (2018 - 2019)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    &copy; 2024 Amit Morgan. All rights reserved.
+  </footer>
+</body>
+</html>
